@@ -1,0 +1,23 @@
+{
+    "name": "POLIZA",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node -r esm src/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "api": "node -r esm src/app.js"
+    },
+    "keywords": [],
+    "author": "Martha",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "eslint": "^7.25.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "esm": "^3.2.25",
+        "express": "^4.17.1",
+        "prettier": "^2.2.1"
+    }
+}
