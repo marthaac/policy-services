@@ -6,17 +6,18 @@ import { HEALTH, DENTAL } from "../Features/const";
  * @param {string} typePolicy
  * @returns {number}
  */
-export const calcPolicyByWorker = (worker, typePolicy) => {
+export const calcPolicyByWorker = (worker, typePolicy = "H") => {
     let value = 0;
+    let type = typePolicy === "H";
     switch (worker.childs) {
         case 0:
-            value = typePolicy === "H" ? HEALTH.NO_CHILD : DENTAL.NO_CHILD;
+            value = type ? HEALTH.NO_CHILD : DENTAL.NO_CHILD;
             break;
         case 1:
-            value = typePolicy === "H" ? HEALTH.CHILD : DENTAL.CHILD;
+            value = type ? HEALTH.CHILD : DENTAL.CHILD;
             break;
         default:
-            value = typePolicy === "H" ? HEALTH.CHILDS : DENTAL.CHILDS;
+            value = type ? HEALTH.CHILDS : DENTAL.CHILDS;
             break;
     }
     return value;
