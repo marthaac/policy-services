@@ -11,3 +11,5 @@ export const DENTAL = {
     CHILD: 0.195,
     CHILDS: 0.248,
 };
+
+export const EXPRESS_PORT = 3000;

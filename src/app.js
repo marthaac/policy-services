@@ -1,7 +1,8 @@
 import express from "express";
 import { getCopay, getPolicy } from "./Service/policy";
+import { EXPRESS_PORT } from "./Features/const";
+
 const app = express();
-const port = 3000;
 
 app.get("/policy", (req, res) => {
     getPolicy()
@@ -21,6 +22,6 @@ app.get("/copay", (req, res) => {
         });
 });
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+app.listen(EXPRESS_PORT, () => {
+    console.log(`App listening at http://localhost:${EXPRESS_PORT}`);
 });
